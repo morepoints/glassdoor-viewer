@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "Glassdoor Viewer",
+  "version": "1.0",
+  "description": "Allow the viewing of glassdoor postings without creating an account.",
+  "permissions": ["scripting", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.glassdoor.*/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
