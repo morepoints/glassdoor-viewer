@@ -1,3 +1,9 @@
+const isGlassdoor = host => /(^|\.)glassdoor\./i.test(host);
+
+if (!isGlassdoor(location.hostname)) {}
+
+else {
+
 (function persistentCleanup() {
   const cleanOverlayAndBody = () => {
     const body = document.body;
@@ -63,3 +69,4 @@
     }
   }, 100);
 })();
+}
